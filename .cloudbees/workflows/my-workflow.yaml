@@ -7,6 +7,7 @@ jobs:
   tekton:
     steps:
       - name: hello
+        id: hello
         uses: docker://alpine:3
         shell: sh
         run: |
@@ -16,4 +17,22 @@ jobs:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
       labels: mlcb-macos-arm64
+    delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
+  edge_mlcb:
+    with:
+      script: |
+        echo "Hello world! I'm $(whoami) on $(hostname)"
+      labels: mlcb
+    delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
+  edge_fail:
+    with:
+      script: |
+        echo "Hello world! I'm $(whoami) on $(hostname)"
+      labels: caca
+    delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
+  edge2:
+    with:
+      script: |
+        echo "Hello world! I'm $(whoami) on $(hostname)"
+      labels: "mlcb,os:darwin,arch:arm64,self-hosted"
     delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
