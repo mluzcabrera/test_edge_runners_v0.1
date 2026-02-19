@@ -8,5 +8,5 @@ jobs:
     with:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
-      labels: "mlcb"
+      labels: mlcb-macos-arm64
     delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
