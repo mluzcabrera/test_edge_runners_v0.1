@@ -12,7 +12,7 @@ jobs:
         shell: sh
         run: |
           echo "Hello, world! I'm $(whoami) on $(hostname)"
-  edge:
+  edge_mlcb-macos-arm64:
     with:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
@@ -24,13 +24,13 @@ jobs:
         echo "Hello world! I'm $(whoami) on $(hostname)"
       labels: mlcb
     delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
-  edge_fail:
+  edge_caca:
     with:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
       labels: caca
     delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
-  edge2:
+  edge_mlcb_os-darwin_arch-arm64_self-hosted:
     with:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
