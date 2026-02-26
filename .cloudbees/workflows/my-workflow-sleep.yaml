@@ -9,5 +9,5 @@ jobs:
       script: |
         echo "Hello world! I'm $(whoami) on $(hostname)"
         sleep 120
-      labels: caca
+      labels: sleep
     delegates: https://github.com/dwnusbaum/pipeline-library-testing/custom-job.yml
