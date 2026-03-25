@@ -17,7 +17,7 @@ jobs:
         echo "${{ inputs.par1 }}"
 
         echo "\033[0;31m Vars context \033[0m"
-        echo "${{ vars.vars_1 }}"
+        echo "${{ vars.testpropertymlcb4 }}"
 
         echo "\033[0;31m CloudBees context \033[0m"
         echo "${{ toJSON(cloudbees) }}"
